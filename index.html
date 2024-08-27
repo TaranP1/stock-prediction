@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction with LSTMs</title>
+    <link href = "{{url_for('static', filename='styles.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <h1> Stock Prediction with LSTMs</h1>
+    <form action = '/stock'>
+        <input type="text" name="ticker" id="ticker" placeholder="Enter Ticker"/>
+        <button type="submit" >Submit </button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ticker}} LSTM Price Predictions</title>
+    <link href="{{url_for('static', filename='styles.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <h1>{{ticker}} LSTM Price Predictions</h1>
+    <form action='/stock'> 
+        <input type="text" name="ticker" id="ticker" placeholder="Enter Ticker Symbol"/>
+        <button type="submit">Submit</button>
+
+
+    </form>
+    <div>
+        <h2>Stock Closing Prices</h2>
+        <img src="{{url_for('static', filename='stock_plot.png')}}" alt="Stock Closing Prices">
+    </div>
+    <div>
+        <h2>Model Data Split</h2>
+        <img src="{{url_for('static', filename='model_plot.png')}}" alt="Model Data Split">
+    </div>
+    <div>
+        <h2>Training Predictions</h2>
+        <img src="{{url_for('static', filename='training_predictions.png')}}" alt="Training Predictions">
+    </div>
+    <div>
+        <h2>Validation Predictions</h2>
+        <img src="{{url_for('static', filename='validation_predictions.png')}}" alt="Validation Predictions">
+    </div>
+    <div>
+        <h2>Testing Predictions</h2>
+        <img src="{{url_for('static', filename='testing_predictions.png')}}" alt="Testing Predictions">
+    </div>
+    <div>
+        <h2>Overall Predictions</h2>
+        <img src="{{url_for('static', filename='overall_predictions.png')}}" alt="Overall Predictions">
+    </div>
+</body>
+</html>
